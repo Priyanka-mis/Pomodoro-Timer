@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "./Pomodoro.css";
 
 function PomodoroTimer() {
-  const [timeLeft, setTimeLeft] = useState(1 * 60);
+  const [timeLeft, setTimeLeft] = useState(25 * 60);
   const [isBreak, setIsBreak] = useState(false);
   const timerRef = useRef(null);
 
@@ -10,7 +10,6 @@ function PomodoroTimer() {
     if (timerRef.current) {
       return;
     }
-
     timerRef.current = setInterval(() => {
       setTimeLeft((prevTime) => {
         if (prevTime > 0) {
@@ -18,7 +17,6 @@ function PomodoroTimer() {
         } else {
           clearInterval(timerRef.current);
           timerRef.current = null;
-
           if (!isBreak) {
             setTimeout(() => {
               alert("Work session complete! Time for a break.");
@@ -35,7 +33,6 @@ function PomodoroTimer() {
       });
     }, 1000);
   };
-
   const stopTimer = () => {
     clearInterval(timerRef.current);
     timerRef.current = null;
@@ -44,7 +41,7 @@ function PomodoroTimer() {
   const resetToWork = () => {
     stopTimer();
     setIsBreak(false);
-    setTimeLeft(1 * 60);
+    setTimeLeft(25 * 60);
     startTimer();
   };
 
@@ -52,13 +49,13 @@ function PomodoroTimer() {
     stopTimer();
     setIsBreak(true);
     setTimeLeft(5 * 60);
-    setTimeout(startTimer, 500); // Ensure UI updates before starting timer
+    setTimeout(startTimer, 500); 
   };
 
   const resetTimer = () => {
     stopTimer();
     setIsBreak(false);
-    setTimeLeft(1 * 60);
+    setTimeLeft(25 * 60);
   };
 
   const formatTime = (time) => {
