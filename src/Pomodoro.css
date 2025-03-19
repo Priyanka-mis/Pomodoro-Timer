@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container {
+    text-align: center;
+    width: 700px; 
+    max-width: 900px; 
+    height: auto;
+    padding: 20px;
+    background: linear-gradient(to right, #5a18d3, #a35de5);
+    color: transparent;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 15px;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.timer {
+    padding: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin: 30px auto;
+    border: 4px solid rgb(255, 128, 0);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 4px solid rgb(255, 128, 0);
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    background-color:rgb(255, 128, 0);
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+    font-weight: 700;
+   
+    
+}
+
+#stop, #break{
+    background-color: rgb(255, 47, 0);
+    color:white
+}
+
